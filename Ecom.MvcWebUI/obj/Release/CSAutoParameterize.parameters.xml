@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="dataConnection-Web.config Connection String" description="dataConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:ecomdb14.database.windows.net,1433;Initial Catalog=ecommercewebdb;User Id=ecommercedb@ecomdb14;Password=Masa1402" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\gorkemcenger\\source\\repos\\Ecom\\Ecom\.MvcWebUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='dataConnection']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,212 @@
+﻿
+
+.homepageWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    border: 1px solid white;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.homepageNavbarWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.homepageNavbarLogoImg {
+    height: 100px;
+    width: 200px;
+}
+
+.homepageNavbarRedirecterWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 400px;
+}
+
+.homepageNavbarHomeRedirecter,
+.homepageNavbarStoreRedirecter {
+    height: 60%;
+    width: 50%;
+    color: white;
+    background: #4C8FFB;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 14pt;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .homepageNavbarHomeRedirecter:hover,
+    .homepageNavbarStoreRedirecter:hover {
+        border: 1px #C6C6C6 solid;
+        box-shadow: 1px 1px 1px #EAEAEA;
+        color: #4C8FFB;
+        background: #F7F7F7
+    }
+
+.homepageNavbarSearchWrapper {
+    height: 50%;
+    display: flex;
+    border-radius: 2px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageNavbarSearchTextbox {
+    height: 100%;
+    width: 300px !important;
+    border-radius: 4px;
+    font-size: 14pt;
+    border: 1px solid black;
+    padding: 0px 0px 0px 0px;
+    display: inline-flex;
+}
+
+.homepageNavbarSearchButton {
+    height: 100%;
+    width: 60px;
+    display: inline-flex;
+    border: none;
+    border-radius: 4px;
+    background-color: ffffff;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid black;
+    right: 60px;
+    padding: 0px 0px 0px 0px;
+}
+
+.homepageNavbarSearchButtonImage {
+    height: 100%;
+    width: 60px;
+}
+
+.homepageNavbarLoginFormWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 100%;
+    align-items: center;
+    border: 1px solid white;
+}
+
+.homepageNavbarLoginFormButtonWrapper {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.homepageNavbarLoginFormForm {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageNavbarLoginFormUsernameTextbox,
+.homepageNavbarLoginFormPasswordTextbox {
+    height: 40%;
+    width: 160px;
+    margin: 5px;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.homepageNavbarLoginFormLoginButton,
+.homepageNavbarLoginFormRegisterButton {
+    height: 80px;
+    width: 170px;
+    margin: 5px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #4C8FFB;
+    font-weight: bold;
+}
+
+    .homepageNavbarLoginFormLoginButton:hover,
+    .homepageNavbarLoginFormRegisterButton:hover {
+        border: 1px #C6C6C6 solid;
+        box-shadow: 1px 1px 1px #EAEAEA;
+        color: #4C8FFB;
+        background: #F7F7F7
+    }
+
+
+#homepageSliderWrapper .item img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+#homepageSliderWrapper {
+    height: 500px;
+    width: 1200px;
+}
+
+.owl-dots {
+    position: relative;
+    top: -50px;
+}
+
+.homepageFeaturedProductsWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 800px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    background: #4C8FFB;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageSingleFeaturedProduct {
+    width: 350px;
+    height: 350px;
+    flex: 350px 0;
+    margin: 20px;
+    border: 1px solid 4C8FFB;
+    color: white;
+    border-radius: 4px;
+}
+
+.homepageSingleFeaturedProductImage {
+    height: 300px;
+    width: 350px;
+    border-radius: 4px;
+}
+
+.homepageSingleFeaturedProductLink {
+    height: 50px;
+    width: 350px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}

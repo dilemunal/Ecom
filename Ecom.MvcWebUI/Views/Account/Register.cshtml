@@ -1,0 +1,252 @@
+﻿@model Ecom.MvcWebUI.Models.Register
+@{
+    ViewBag.Title = "Register";
+}
+
+
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/App_Themes/navbarRegister.css" />
+    <link rel="stylesheet" href="~/App_Themes/Index.css" />
+    <link rel="stylesheet" href="/Common/css/footer.css" />
+
+    <title> register </title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+        }
+
+            /* Style the header links */
+            .header a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 25px;
+                border-radius: 4px;
+            }
+
+                /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+                .header a.logo {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                /* Change the background color on mouse-over */
+                .header a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                /* Style the active/current link*/
+                .header a.active {
+                    background-color: dodgerblue;
+                    color: white;
+                }
+
+        /* Float the link section to the right */
+        .header-right {
+            float: right;
+        }
+
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+            background-color: white;
+            width: 50%;
+            margin: auto;
+        }
+
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+            input[type=text]:focus,
+            input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color: #046daa;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+            .registerbtn:hover {
+                opacity: 1;
+            }
+
+        /* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #212121;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="homepageNavbarWrapper">
+        <img src="https://www.svgrepo.com/show/170137/e-commerce-shopping-cart-tool.svg"
+             class="homepageNavbarLogoImg" />
+        <div class="homepageNavbarRedirecterWrapper">
+            <a class="homepageNavbarHomeRedirecter" href="/Index/Index"> Home </a>
+            <a class="homepageNavbarStoreRedirecter" href="#"> Store </a>
+        </div>
+        <div class="homepageNavbarSearchWrapper">
+            <input class="homepageNavbarSearchTextbox" type="text" />
+
+            <input class="homepageNavbarSearchButton" type="image" src="data:image/png;base64,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" />
+
+        </div>
+        <div class="homepageNavbarLoginFormWrapper">
+            <form class="homepageNavbarLoginFormForm">
+
+
+                <div class="homepageNavbarLoginFormButtonWrapper">
+
+                    <a type="button" style="text-decoration:none" class="homepageNavbarLoginFormRegisterButton" href="/Account/Login">LOGIN</a>
+                    <a type="button" style="text-decoration:none" class="homepageNavbarLoginFormRegisterButton" href="/Account/Register">REGISTER</a>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SurName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SurName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SurName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RePassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RePassword, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RePassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Kullanıcı Oluştur" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+
+    <footer></footer>
+</body>
+
+</html>
+
+
+
+
+
+</html>

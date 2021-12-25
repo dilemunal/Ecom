@@ -1,0 +1,48 @@
+﻿.NavbarRegisterWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100px;
+    width: 1600px;
+    border: 1px solid white;
+}
+
+.NavbarRegisterLogoImg {
+    height: 100px;
+    width: 200px;
+}
+
+.NavbarRegisterRedirecterWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 400px;
+    margin-left: auto;
+}
+
+.NavbarRegisterSingleRedirecter {
+    height: 60%;
+    width: 50%;
+    color: white;
+    background: #4C8FFB;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 14pt;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.NavbarRegisterSingleRedirecter {
+    border: 1px #C6C6C6 solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #4C8FFB;
+    background: #F7F7F7
+}
